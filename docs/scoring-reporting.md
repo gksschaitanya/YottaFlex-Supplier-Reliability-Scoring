@@ -1,0 +1,5 @@
+# Scoring reports
+
+The run summary exposes supplier totals, valid/insufficient totals, classification distribution, and critical compliance count from persisted score rows. Rankings sort valid scores first and insufficient scores last. The JSON API exposes persisted score rows.
+
+`GET /api/v1/score-runs/{runId}/export` supports the reports `scores`, `components`, `metrics`, `evidence`, `exclusions`, and `run`. Data reports are available as JSON or CSV and paginated up to 10,000 rows per response; request further pages to retrieve the entire dataset. The JSON-only `run` report includes the persisted run configuration snapshot, supplier totals, classifications, component status counts, and critical compliance total. Score/component/evidence exports read persisted results and never rerun scoring. CSV fields use stable snake_case names, quoted cells, CRLF rows, and formula-prefix escaping for textual values. JSONB metrics and details are emitted as JSON text in tabular reports. Ground-truth artifacts are not part of these APIs. Database-backed export verification remains pending while PostgreSQL is unavailable.

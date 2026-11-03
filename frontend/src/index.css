@@ -1,0 +1,32 @@
+:root {
+  font-family: 'Segoe UI', sans-serif;
+  color: #23333a;
+  background: #f3f6f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  --ink: #20343c;
+  --muted: #718087;
+  --line: #e1e8e6;
+  --paper: #ffffff;
+  --canvas: #f3f6f5;
+  --accent: #d56645;
+  --teal: #237b73;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--canvas);
+}
+
+button, input, select, textarea { font: inherit; }
+
+a { color: inherit; }
+
+#root { min-height: 100vh; }
